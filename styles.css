@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Mada|Nunito|Poppins|Ubuntu');
+
+* {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: 'Mada', sans-serif;
+  /*
+  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Mada', sans-serif;
+  */
+}
