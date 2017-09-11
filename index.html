@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -13,7 +14,8 @@
     </div>
 
     <div class="search-wrapper">
-      <input type="search" class="search-box" placeholder="Enter a search term"/>
+      <input type="text" class="search-box" onkeydown="startSearch(event)" placeholder="Enter a search term"/>
+      <i class="fa fa-search" aria-hidden="true"></i>
     </div>
 
     <div class="wrap">
@@ -24,7 +26,7 @@
         </div>
       </div>
       <div class="item">
-        <a class="title" href="#" target="_blank">Richard Feynman</a>
+        <a class="item-title" href="#" target="_blank">Richard Feynman</a>
         <div class="description">
           <p>Richard Phillips Feynman (/ˈfaɪnmən/; May 11, 1918 – February 15, 1988) was an American theoretical physicist known for his work in the path integral formulation of quantum mechanics, the theory of quantum electrodynamics, and the physics of the superfluidity of supercooled liquid helium, as well as in particle physics for which he proposed the parton model.</p>
         </div>
@@ -32,6 +34,7 @@
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
   </body>
 </html>
