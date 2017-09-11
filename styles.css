@@ -4,11 +4,44 @@
   display: block;
   margin: 0;
   padding: 0;
-  font-family: 'Mada', sans-serif;
+  font-family: 'Poppins', sans-serif;
   /*
   font-family: 'Ubuntu', sans-serif;
   font-family: 'Poppins', sans-serif;
   font-family: 'Nunito', sans-serif;
   font-family: 'Mada', sans-serif;
   */
+}
+
+body {
+  background-color: lightgrey;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+img.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.search-wrapper {
+	margin-top: 50px;
+}
+
+.search-box {
+  height: 40px;
+  width: 500px;
+	border: 1px solid #ccc;
+  outline: 0;
+  border-radius: 15px;
+  padding: 0 10px;
+  margin: auto;
+}
+.search-box:focus {
+	box-shadow: 0 0 15px 5px #b0e0ee;
+	border: 2px solid #bebede;
 }
