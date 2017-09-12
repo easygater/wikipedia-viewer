@@ -6,28 +6,28 @@
 
 function startSearch(event) {
   if(event.key === 'Enter') {
-    var searchFor = $('.search-box:text').val();
-    $('.search-box:text').val('');
+    var searchFor = $('.search-input:text').val();
+    $('.search-input:text').val('');
     $('i').replaceClass('fa-times', 'fa-search');
-    $('.search-box').blur();
+    $('.search-input').blur();
 
-    $.ajax({});
+    // $.ajax({});
 
     console.log('Key enterred: ' + event.key);
     console.log('enterred text = ' + searchFor);
   }
 }
 
-$('.search-box').focus(function() {
+$('.search-input').focus(function() {
   $('i').replaceClass('fa-search', 'fa-times');
 });
 
-$('.search-box').blur(function() {
+$('.search-input').blur(function() {
   $('i').replaceClass('fa-times', 'fa-search');
 });
 
 $('i.fa').click(function() {
-  $('.search-box:text').val('');
+  $('.search-input:text').val('');
 });
 
 $(document).ready(function() {
