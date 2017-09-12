@@ -110,3 +110,9 @@ i.fa-times {
   font-size: 12px;
   color: DarkSlateGray;
 }
+
+span.searchmatch {
+  display: inline;
+  font-weight: bold;
+  color: IndianRed;
+}
