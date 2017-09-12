@@ -4,15 +4,24 @@
     };
 }(jQuery));
 
+function composePageName(titleStr) {
+  return titleStr.replace(/ /g, '_');
+}
+
 function displaySearchResults(items) {
-  // console.log('Ziggy made ajax with item count ' + items.length);
-  // console.log('Title -> ' + items[0].title);
-  // console.log('Description -> ' + items[0].snippet);
+  var baseURL = 'https://en.wikipedia.org/wiki/';
+
   if(items.length > 0) {
-    for(item in items) {
-      // TODO: write the code to display each item on the site
+    for(var i = 0; i < items.length; i++) {
+      var resultHTML = '<div class="item">' +
+      '<a class="title" href="' + baseURL + composePageName(items[i].title) +
+      '" target="_blank">' + items[i].title + '</a><div class="description"><p>' +
+      items[i].snippet + '</p></div></div>';
+      $('div.wrap').append(resultHTML);
     }
-  } else {}
+  } else {
+    $('div.wrap').append('<h2>Sorry, something went wrong. Check your connection.</h2>');
+  }
 }
 
 function startSearch(event) {
@@ -21,6 +30,7 @@ function startSearch(event) {
     $('.search-input:text').val('');
     $('i').replaceClass('fa-times', 'fa-search');
     $('.search-input').blur();
+    $('div.wrap').empty();
 
     /*
       url: 'https://en.wikipedia.org/w/api.php'   -> works
@@ -41,9 +51,6 @@ function startSearch(event) {
         displaySearchResults(data.query.search);
       }
     });
-
-    console.log('Key enterred: ' + event.key);
-    console.log('enterred text = ' + searchFor);
   }
 }
 
